@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Use PumaDev Locally
 
-Things you may want to cover:
+```sh
+# https://github.com/puma/homebrew-puma
+echo 3000 > ~/.puma-dev/happyapp
+```
 
-* Ruby version
+## Setup
 
-* System dependencies
+Application Login URI: https://happyapp.test
+Allowed Callback URLs: https://happyapp.test/auth/auth0/callback
+Allowed Logout URLs: https://happyapp.test
+Allowed Web Origins: https://happyapp.test
 
-* Configuration
+## Startup Rails
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle
+AUTH0_DOMAIN=... AUTH0_CLIENT_ID=... AUTH0_CLIENT_SECRET=.. rails s
+```
