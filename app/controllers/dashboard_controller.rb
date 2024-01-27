@@ -3,5 +3,6 @@ class DashboardController < ApplicationController
 
   def show
     @user = session[:userinfo]
+    @permissions = Current.permissions
   end
 end

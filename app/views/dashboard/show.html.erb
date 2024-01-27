@@ -4,6 +4,13 @@
 </section>
 <section class="container">
   <div class="panel panel-default">
+    <div class="panel-heading">Normalized Permissions</div>
+    <div class="panel-body">
+      <pre><%= (@permissions) %></pre>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
     <div class="panel-heading">Normalized User Profile</div>
     <div class="panel-body">
       <pre><%= JSON.pretty_generate(@user) %></pre>

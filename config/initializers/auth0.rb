@@ -8,7 +8,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     AUTH0_CONFIG['auth0_domain'],
     callback_path: '/auth/auth0/callback',
     authorize_params: {
-      scope: 'openid profile'
+      scope: 'openid profile',
+      audience: 'https://happyapp.test/',
     }
   )
 end

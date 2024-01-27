@@ -8,6 +8,7 @@ class Auth0Controller < ApplicationController
     # for complete information on 'omniauth.auth' contents.
     auth_info = request.env['omniauth.auth']
     session[:userinfo] = auth_info['extra']['raw_info']
+    session[:token] = auth_info['credentials']['token']
 
     # Redirect to the URL you want after successful auth
     redirect_to '/dashboard'
@@ -24,6 +25,7 @@ class Auth0Controller < ApplicationController
   end
 
   private
+
   AUTH0_CONFIG = Rails.application.config_for(:auth0)
 
   def logout_url
